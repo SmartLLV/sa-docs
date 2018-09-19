@@ -90,3 +90,4 @@ A：可以好好调研一下一般的后台管理系统都有哪些系统再下�
 ## 5 参考资料
 - [后台管理系统](https://baike.baidu.com/item/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F)
 - [网站后台管理系统](https://wapbaike.baidu.com/item/网站后台管理系统)
+- [后台管理系统参考](https://www.uisdc.com/responsive-admin-dashboard-template)
