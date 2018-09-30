@@ -13,17 +13,17 @@ layout: default
 * 5、[Product Backlog](05-product-backlog) （产品特性）
 * 6、Requirement specification（需求规格说明）
     - 6.1 [Usecase Diagram](06-requirement-1)（用例图）
-    - 6.2 [Use Cases]()（用例+活动图）
-    - 6.3 [Domian Models]()（领域模型）
-    - 6.4 [State Models]()（状态模型）
-    - 6.5 [System Sequence Diagrams]()（功能模型）
+    - 6.2 [Use Cases](06-requirement-2)（用例+活动图）
+    - 6.3 [Domian Models](06-requirement-3)（领域模型）
+    - 6.4 [State Models](06-requirement-4)（状态模型）
+    - 6.5 [System Sequence Diagrams](06-requirement-5)（功能模型）
     - 6.6 [Supplementary Requirements](06-requirement-6)（补充需求）
 * 7、Design（设计）
     - 7.1 UI design
         - XX 用例 UI设计
     - 7.2 Database design
         - 7.2.1 用户及权限系统与数据表设计
-        - 7.2.2 XX子系统数据课设计 
+        - 7.2.2 XX子系统数据课设计
         - 7.2.x 第三方数据评审结果
     - 7.3 API design
     - 7.4 Software Architecture Document
