@@ -38,7 +38,7 @@ layout: default
     - 9.1 XX短视频
     - 9.2 XX短视频
 * X1 meet_recording
-    - inception meeting (yy/mm/dd)
+    - [inception meeting](X1-meeting-record1) (2018/10/04)
 * X2 Tech/Work Report
     - 学号-title
 * X3 Final Report
