@@ -37,9 +37,10 @@ layout: default
     - 9.1 XX短视频
     - 9.2 XX短视频
 * X1 meet_recording
-    - [inception meeting](X1-meeting-record1) (2018/10/04)
+    - [Inception meeting](X1-meeting-record) (2018/10/04)
+    - [Iteration 1 meeting](X1-meeting-record1) (2018/11/04)
 * X2 Tech/Work Report
-    - 学号-title
+    - 18214692-[解决方案：git pull 出现unrelated history](https://smartllv.github.io/sa-lab-automation/01-git-pull-unrelated)
 * X3 Final Report
     - 学号-title
     - 小组分工与贡献率说明

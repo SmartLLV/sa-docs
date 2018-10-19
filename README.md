@@ -83,3 +83,10 @@ The documents about Software Analysis &amp; Design Team Work. **Course Thesis Re
     - 前端：用户管理界面开发
     - 后端：数据库查询优化
 
+#### Week 7 (10/21/2018)
+
+- 需求分析：无
+- 概要设计 & 详细设计：无
+- 编码 & 测试：
+    - 前端：用户管理界面开发
+    - 后端：数据库查询优化
