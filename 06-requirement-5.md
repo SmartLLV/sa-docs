@@ -7,32 +7,40 @@ title: System Sequence Diagram
 
 ## 6.5 System Sequence Diagram
 
-- 场景1: 预定影票成功场景
-  - 绘制者：Summer - 15331062
+- 场景1 顾客取消订单
 
-![user_book_success](/assets/user_book_success.png)
+![顾客取消订单](assets/ssd/顾客取消订单.png)
 
-- 场景2：预定影票失败场景（无座位）
-	- 绘制者：Zack - 15331392
-![user_payment_failed_seat_insufficient](/assets/user_payment_failed_seat_insufficient.png)
+- 场景2 商家取消订单
 
-- 场景3: 支付影票成功场景
-  - 绘制者：JackyLrd - 15331161
+![商家取消订单](assets/ssd/商家取消订单.png)
 
-![6.5_user_payment_success](/assets/6.5_user_payment_success.png)
+- 场景3 商家查询历史订单
 
-- 场景4: 支付影票失败场景（授权失败）
-  - 绘制者：lzq - 15331176
-![支付影票失败场景（授权失败）](/assets/支付影票失败场景（授权失败）顺序图.png)
+![商家查询历史订单](assets/ssd/商家查询历史订单.png)
 
-- 场景5: 支付影票失败场景（余额不足）
-  - 绘制者：MichealWind - 15331152
-![user_payment_failed_balance_insufficient](/assets/6.5_user_payment_failed_balance_insufficient.png)
+- 场景4 扫码点餐
 
-- 场景6: 转让影票成功场景
-  - 绘制者：liangfeng - 15331181
-![转让影票成功场景](/assets/转让电影票成功系统顺序图.png)
+![扫码点餐](assets/ssd/扫码点餐.png)
 
-- 场景7：转让电影票失败场景
-  - 绘制者： mobilesuitlovelive - 15331175
-![转让电影票失败场景](/assets/转让失败系统顺序图.PNG)
+![商家接受订单](assets/ssd/商家接受订单.png)
+
+![商家拒绝订单](assets/ssd/商家拒绝订单.png)
+
+- 场景5 商家管理菜品
+
+![商家管理菜品](assets/ssd/商家管理菜品.png)
+
+- 场景6 商家生成小程序码
+
+![商家生成小程序码](assets/ssd/商家生成小程序码.png)
+
+- 场景7 登录注册
+
+![顾客注册](assets/ssd/顾客注册.png)
+
+![顾客登录](assets/ssd/顾客登录.png)
+
+![餐厅注册](assets/ssd/餐厅注册.png)
+
+![餐厅登录](assets/ssd/餐厅登录.png)

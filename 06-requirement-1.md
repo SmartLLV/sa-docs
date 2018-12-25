@@ -2,15 +2,9 @@
 layout: default
 title: Usecase Diagram
 ---
-# LabAutomation 需求规格说明
+# 点餐系统需求规格说明
 
-## 6.1 Usecase Diagram
-
-### LabAutomation系统页面跳转逻辑图
-
-![LabAutomation逻辑图](./assets/页面跳转.jpg)
-
-### 用例图
-![LabAutomation用例图](./assets/用例图.jpg)
-
+# 6.1 用例图
+下图为整个系统的用例一览，在`assets/use_case`文件夹中亦有各个子用例图。
+![](assets/use_case/img_use_case/total.png)
 

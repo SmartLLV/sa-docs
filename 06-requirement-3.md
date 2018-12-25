@@ -2,7 +2,7 @@
 layout: default
 title: Domain Model
 ---
-# Owl 需求规格说明
+# 点餐系统需求规格说明
 
 ## 6.3 Domain Model
-![6.3](/assets/6.3.png)
+![6.3](assets/%E9%A2%86%E5%9F%9F%E6%A8%A1%E5%9E%8B.png)
