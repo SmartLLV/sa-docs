@@ -3,7 +3,7 @@ layout: default
 title: System Sequence Diagram
 ---
 
-# Owl 需求规格说明
+# 点餐系统需求规格说明
 
 ## 6.5 System Sequence Diagram
 

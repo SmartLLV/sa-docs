@@ -2,7 +2,7 @@
 layout: default
 title: Supplementary Requirements
 ---
-# lab-automation 需求规格说明
+# 点餐系统需求规格说明
 
 ## 6.6 Supplementary Requirements
 
