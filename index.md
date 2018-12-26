@@ -20,16 +20,16 @@ layout: default
     - 6.6 [Supplementary Requirements](06-requirement-6)（补充需求）
 * 7、Design（设计）
     - 7.1 [UI design](07-design-1)
-        - Mini Lab Automation 用例 UI设计
+        - ChiHuoBao 用例 UI设计
     - 7.2 [Database design](07-design-2)
         - 7.2.1 用户及权限系统数据库设计
-        - 7.2.2 Mini Lab Automation子系统数据课设计
+        - 7.2.2 ChiHuoBao子系统数据课设计
         - 7.2.3 第三方数据评审结果
     - 7.3 [API 设计](07-design-3)
     - 7.4 [Software Architecture Document](07-design-4)
     - 7.5 [Usecase design](07-design-5)
 * 8、生产规范与指南
-    - 8.1 [Mini Lab Autoomation 代码规范](08-code-rules-and-guide-1)
+    - 8.1 [ChiHuoBao 代码规范](08-code-rules-and-guide-1)
     - 8.2 [REST API 设计规范](08-code-rules-and-guide-2)
     - 8.3 [逻辑架构到应用程序映射指南](08-code-rules-and-guide-3)
     - 8.4 [物理架构云上部署 .travis.yml 文件编写与使用](08-code-rules-and-guide-4)
