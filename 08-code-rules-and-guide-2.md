@@ -12,13 +12,13 @@ title: API设计规范
 ### 2、版本
 
 将API的版本放入URL中，例如：
-https://minilab.com/v1
+https://chihuobao.com/v1
 
 ### 3、路径
 
 由于REST API是面向资源的，所以路径中只能出现名词，不能出现动词，所用名词尽量参考数据库表的设计,例如：
-https://minilab.com/v1/users
-https://minilab.com/v1/members
+https://chihuobao.com/v1/users
+https://chihuobao.com/v1/members
 
 ### 4、http请求方式
 
@@ -45,7 +45,7 @@ GET /users/ID：获取某个指定用户的信息
 
 如果对资源的需求不是全部，那么需要提供过滤的参数，例如：
 
-https://minilab.com/v1/users?name=abc *返回名字为abc的用户*
+https://chihuobao.com/v1/users?name=abc *返回名字为abc的用户*
 
 ### 6、数据
 
