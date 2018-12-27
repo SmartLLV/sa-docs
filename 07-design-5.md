@@ -2,7 +2,7 @@
 layout: default
 title: Usecase design
 ---
-# Mini Lab Design
+# 点餐系统 Design
 
 ## 7.5 Usecase design
 

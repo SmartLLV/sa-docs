@@ -3,21 +3,17 @@ layout: default
 title: API Design
 ---
 
-# Owl Design
+# 点餐系统 Design
 
 ## 7.3 API design
 FORMAT: 1A
-HOST: http://owl.apiblueprint.org/
+HOST: http://chihuobao.apiblueprint.org/
 
-## Owl API
-
-Owl is a system for buying movie tickets. You could look
-for updated infomation about movies here, as well as ordering
-snacks such as popcorn.
+## 点餐系统 API
 
 ## Customer Collection [/customer]
 
-Customers are people who have already signed in Owl. A customer
+Customers are people who have already signed in 点餐系统. A customer
 has the following attributes: 
 
 - ID
@@ -37,7 +33,7 @@ containing your information.
 
         {
             "Phone Num": "13536875792",
-            "Password": "pwd@owl",
+            "Password": "pwd@点餐系统",
             "Nick Name": "Jacky",
             "Portrait": "some chosen image",
             "Gender": "male",
@@ -56,7 +52,7 @@ containing your information.
 
         {
             "Nick Name/Phone Num": "Jacky",
-            "Password": "pwd@owl",
+            "Password": "pwd@点餐系统",
         }
 
 + Response 201 (application/json)
