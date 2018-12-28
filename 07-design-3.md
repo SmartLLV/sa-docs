@@ -6,273 +6,125 @@ title: API Design
 # 点餐系统 Design
 
 ## 7.3 API design
-FORMAT: 1A
-HOST: http://chihuobao.apiblueprint.org/
+[API在线文档](https://sa-2018-fall.github.io/sa-api/)
 
 ## 点餐系统 API
 
-## Customer Collection [/customer]
+## 餐厅注册
 
-Customers are people who have already signed in 点餐系统. A customer
-has the following attributes: 
+`POST /restaurant`
 
-- ID
-- Phone Num
-- Password
-- Nick Name
-- Portrait
-- Gender
-- Birthday
+由于需要上传文件，要求使用`multipart/form-data`提交请求。餐厅注册后不会自动登录，请手动调用登录API进行登录。
 
-### Sign Up [POST]
+### 参数说明
 
-You may create your account using this action. It takes a JSON object
-containing your information.
+| 参数名   | 数据类型               | 描述     | 必需 |
+| -------- | ---------------------- | -------- | ---- |
+| email    | string                 | 注册邮箱 | 是   |
+| password | string                 | 密码     | 是   |
+| name     | string                 | 餐厅名   | 是   |
+| license  | file（docx、doc、pdf） | 营业执照 | 是   |
 
-+ Request (application/json)
+### 返回值
 
-        {
-            "Phone Num": "13536875792",
-            "Password": "pwd@点餐系统",
-            "Nick Name": "Jacky",
-            "Portrait": "some chosen image",
-            "Gender": "male",
-            "Birthday": "2000-04-12"
-        }
+| HTTP状态码 | 返回格式            | 描述       |
+| ---------- | ------------------- | ---------- |
+| 200        | NULL                | 成功       |
+| 400        | {message: 'reason'} | 错误的请求 |
 
-+ Response 201 (application/json)
+### 示例
 
-        {
-            "State": "Signed Up Successfully!"
-        }
+```js
+const form = new FormData();
+form.append('email', info.email);
+form.append('name', info.name);
+form.append('password', info.password);
+form.append('license', info.license, 'a.docx');
+axios.post('/restaurant', form, {
+  headers: form.getHeaders()
+});
+```
 
-### Log In [POST]
+## 顾客登录与注册
 
-+ Request (application/json)
+`POST /customer/session`
 
-        {
-            "Nick Name/Phone Num": "Jacky",
-            "Password": "pwd@点餐系统",
-        }
+调用API之前请使用微信小程序接口`wx.login`获取`code`，并将`code`作为登录凭证进行请求。调用此API后，如果用户没有注册，则会自动注册并登录；如果用户已经注册，则完成登录。
 
-+ Response 201 (application/json)
+### 参数说明
 
-        {
-            "State": "Logged In Successfully!"
-        }
-        
-### Log Out [POST]
+| 参数名 | 数据类型 | 描述         | 必须 |
+| ------ | -------- | ------------ | ---- |
+| code   | string   | 微信登录凭证 | 是   |
 
-+ Request (application/json)
+### 返回值
 
-        {
-            "Nick Name/Phone Num": "Jacky",
-        }
+| HTTP状态码 | 返回格式            | 描述       |
+| ---------- | ------------------- | ---------- |
+| 200        | NULL                | 成功       |
+| 400        | {message: 'reason'} | 错误的请求 |
 
-+ Response 201 (application/json)
+### 系统流程图
 
-        {
-            "State": "Logged Out Successfully!"
-        }
-        
-### Comment on Movie [POST]
+注册流程图
 
-+ Request (application/json)
+![注册流程](assets/API/顾客注册.png)
 
-        {
-            "Name": "Jacky's Adventure in HK",
-            "Score": "7.5"
-        }
+登录流程图
 
-+ Response (application/json)
+![登录流程](assets/API/顾客登录.png)
 
-        {
-            "State": "Comment Successfully!"
-        }
+### 示例
 
+ ```js
+const { code } = await wx.login();
+axios.post('/customer/session', { code });
+ ```
 
-## Movies Collection [/movies]
+## 发送验证邮件
 
-A movie has the following attributes:
-- ID
-- Name
-- Summary
-- Score
+`POST /restaurant/emailConfirm`
 
-### Add Movie [POST]
+使用这个API之前，请先保证餐厅账号已登录。调用后，系统会向餐厅注册的邮箱发送一封带有认证链接的邮件。
 
-This action should only be used by the system.
+### 参数说明
 
-+ Request (application/json)
+没有参数
 
-        {
-            "Name": "Jacky's Adventure in HK",
-            "Summary": "Jacky is spending his holiday in HK..."
-        }
+### 返回值
 
-+ Response 201 (application/json)
+| HTTP状态码 | 返回格式            | 描述       |
+| ---------- | ------------------- | ---------- |
+| 200        | NULL                | 成功       |
+| 400        | {message: 'reason'} | 错误的请求 |
 
-        {
-            "State": "successfully add movie",
-            "ID": "114514",
-            "Name": "Jacky's Adventure in HK",
-            "Summary": "Jacky is spending his holiday in HK..."
-            "Score": "7.0"
-        }
+### 示例
 
-### Delete Movie [POST]
-
-This action should only be used by the system.
-
-+ Request (application/json)
-
-        {
-            "Name": "Jacky's Adventure in HK"
-        }
+```js
+axios.post('/restaurant/emailConfirm')
+```
 
-+ Response 201 (application/json)
+## 验证邮箱
 
-        {
-            "State": "Delete this movie?",
-            "ID": "114514",
-            "Name": "Jacky's Adventure in HK",
-            "Summary": "Jacky is spending his holiday in HK..."
-            "Score": "7.0"
-        }
+`GET /restaurant/emailConfirm`
 
-+ Request (application/json)
-
-        {
-            "Confirm Info": "Yes"
-        }
-
-+ Response 201 (application/json)
+通过点击认证链接调用这个API。
 
-        {
-            "State": "Delete movie successfully!"
-        }
-        
-### Search Movie [POST]
+### 参数说明
 
-+ Request (application/json)
+| 参数名 | 数据类型 | 描述               | 必须 |
+| ------ | -------- | ------------------ | ---- |
+| cipher | string   | 后端自动生成的密文 | 是   |
+| url    | string   | 成功之后的回调url  | 否   |
 
-        {
-            "Name": "Jacky's Adventure in HK"
-        }
+其中第二个参数`url`：
 
-+ Response 200 (application/json)
-
-        [
-            {
-                "Movie Name": "Jacky's Adventure in HK",
-                "Summary": "Jacky is spending his holiday in HK...",
-                "Score": "7.0"
-                "Available Cinemas": [
-                                        "Jacky's Cinema",
-                                        "Andy's Cinema"
-                                    ]
-            }
-        ]
+- 如果提供，则在成功之后，会重定向到指定url；失败则直接显示失败原因
+- 如果不提供，成功和失败都直接显示
 
-## Cinemas Collection [/cinemas]
+### 返回值
 
-A cinema has the following attributes:
-- ID
-- Location
-- MovieNum
-
-### Search Cinema by Name[POST]
-
-+ Request (application/json)
-
-        {
-            "Name": "Jacky's Cinema"
-        }
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "Name": "Jacky's Cinema",
-                "Location": "Guangzhou",
-                "Movie Number": "7"
-                "Food Suppliers": [
-                                        "Mc Turkey",
-                                        "Ken Hut"
-                                ]
-            }
-        ]
-
-### Search Cinema by District[POST]
-
-+ Request (application/json)
-
-        {
-            "District": "BaiYun District"
-        }
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "Name": "Jacky's Cinema",
-                "Location": "BaiYun District Jacky Road 114",
-                "Movie Number": "7"
-                "Food Suppliers": [
-                                        "Mc Turkey",
-                                        "Ken Hut"
-                                ]
-            }
-        ]
-
-### List All Movies [GET]
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "Movie Name": "Jacky's Adventure in HK",
-                "Summary": "Jacky is spending his holiday in HK...",
-                "Score": "7.0"
-            }
-        ]
-
-## Tickets Collection [/tickets]
-
-A movie ticket has the following attributes:
-- MovieID
-- CinemaID
-- Price
-
-## Food Suppliers Collection [/foodSuppliers]
-
-A food supplier has the following attributes:
-- ID
-- CinemaID
-
-### List All Service [GET]
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "Name": "Jacky's Favourite Meal",
-                "Content": "Hamburger, Cola...",
-                "Price": "$50"
-            }
-        ]
-
-## Food Services Collection [/foodServices]
-
-A food service has the following attributes:
-- ID
-- SupplierID
-- Name
-- Content
-- Price
-
-## Payment Systems Collection [/paymentSystems]
-
-A payment system has the following attributes:
-- ID
-- Name
+| HTTP状态码 | 返回格式            | 描述       |
+| ---------- | ------------------- | ---------- |
+| 200        | NULL                | 成功       |
+| 400        | {message: 'reason'} | 错误的请求 |
