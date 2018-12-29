@@ -6,53 +6,83 @@ title: Usecase design
 
 ## 7.5 Usecase design
 
-#### 用例简介
+### 用例1：点餐下单
+| 版本 | 日期 | 描述 | 作者|
+| -- | -- | -- | -- |
+| 1.5 | 2018.12.12 | 详述版用例 | zq |
 
-该用例为购票订餐：
-用户购票需要：
-选择电影 -> 选择电影院 -> 选择场次 -> 选择座位 -> 选择订餐商(可选) -> 选择食物(可选) -> 支付
+**用例图：**  
+![下单用例图](assets/detail/make_order.png)
 
-使用BCE模式画出的顺序图如下：
-![sequence](/assets/sequence.png)
+**范围：** 客户端
 
-类图如下：
-![class](/assets/class.png)
+**级别：** 用户目标
 
-#### 用例简介
+**主要参与者：** 客户
 
-本用例包含一个用户最基本的一次使用过程，包括：
+**涉众及其关注点：**
+-  顾客：快速便捷点餐下单，清楚知道每个菜的信息
+- 餐厅：减少服务员点餐收银的人工成本，让顾客点餐信息准确地直达后厨
 
-1. Log in
-2. Search movie
-3. Make reservation
-4. Make payment
+**前置条件：** 顾客到店在一张桌子边坐下
 
-流程图按照BCE模型画出，其中由于领域对象或数据实体太多，我统一使用Entities代表实体对象。在这里Entities是代表一类实体，而不是单一的某种实体。 
+**后置条件：** 订单信息传到餐厅管理端
 
-类图按照我们项目实际组成的类，以及它们之间的关系画成。 
+**主成功场景：**
+1. 直接扫描桌面二维码，查看菜单
+2. 选中某样菜品，弹出浮窗选择规格，确认后添加到购物篮，购物篮累计价格。
+重复步骤2，直到顾客全部选好
+3. 下单，确认订单信息和价格
+4. 支付，系统处理支付，下单完成
+5. 餐厅收到新的订单
 
-顺序图
+**扩展：**
 
-![](https://github.com/Owl-Movies-Ticket-System/Dashboard/blob/gh-pages/assets/lf_shunxutu.png?raw=true)
+*a. 任意时刻发送网络请求失败  
+保存好用户操作，包括已点菜品，页面状态。
+  1. 询问失败是否重试
+  2. 修复网络问题，网络恢复
+  3. 系统重建当时的操作场景
 
-类图
+1a. 亦可先进入小程序  
+  1.从微信顶部点击小程序图标进入，显示历史订单界面
+  2.跳到点餐界面，无菜单信息
+  3.提示用户进行扫码
 
-![](https://github.com/Owl-Movies-Ticket-System/Dashboard/blob/gh-pages/assets/lf_leitu.png?raw=true)
+2a. 选中售罄菜品  
+不能添加进购物篮
 
-#### 用例简介
+2b. 取消选中某样菜品或减少份数
+  1. 点开购物篮，弹出已选菜品列表
+  2. 点击按钮直接减少份数或者从购物篮中移除
+  3. 订单信息变化，购物篮价格相应减少
 
-本用例包含一个用户选择影院，在该影院中选择电影，订座，支付的过程：
+2c. 更改某样菜品规格
+  1. 点开购物篮，弹出已选菜品列表
+  2. 选中某项菜品，弹出浮窗显示用户之前选择的规格
+  3. 更改规格，点击修改按钮确定
+  4. 订单信息变化，购物篮价格相应改变
 
-1.	Log in
-2.	Choose Theater
-3.	Choose Movie
-4.	Make Reservation
-5.	Make Payment
+3a. 要修改订单
+  1. 直接返回点餐页面
 
-顺序图，使用BCE模式画出的顺序图如下：
-![](https://github.com/Owl-Movies-Ticket-System/Dashboard/blob/gh-pages/assets/7.5UseCase.png?raw=true)
 
-类图与上相同
+**特殊需求：**
+- 列表浏览时顺滑的用户体验
 
-![](https://github.com/Owl-Movies-Ticket-System/Dashboard/blob/gh-pages/assets/lf_leitu.png?raw=true)
+**技术与数据变元表：**
 
+**发生频率：** 十分频繁
+
+**未决问题：**
+- 系统如何处理支付
+
+### BCE 
+![bce_make_order](assets/detail/MO.png)
+
+### 顺序图
+![scan QR](assets/detail/sequence/scan.jpg)
+![make order](assets/detail/sequence/order.jpg)
+
+### 类图
+![class_make_order](assets/detail/class/MO.png)
