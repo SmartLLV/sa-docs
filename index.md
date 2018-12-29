@@ -22,9 +22,9 @@ layout: default
     - 7.1 [UI design](07-design-1)
         - [ChiHuoBao 用例 UI设计](07-design-1#7.1.2 除登录注册部分)
     - 7.2 [Database design](07-design-2)
-        - 7.2.1 用户及权限系统数据库设计
-        - 7.2.2 ChiHuoBao子系统数据课设计
-        - 7.2.3 第三方数据评审结果
+        - 7.2.1 [用户及权限系统数据库设计](07-design-2#7.2 Database design)
+        - 7.2.2 [ChiHuoBao子系统数据课设计](07-design-2#7.2 Database design)
+        - 7.2.3 [第三方数据评审结果](07-design-2#7.2.1 第三方数据评审结果)
     - 7.3 [API 设计](07-design-3)
     - 7.4 [Software Architecture Document](07-design-4)
     - 7.5 [Usecase design](07-design-5)
