@@ -17,7 +17,9 @@ https://chihuobao.com/v1
 ### 3、路径
 
 由于REST API是面向资源的，所以路径中只能出现名词，不能出现动词，所用名词尽量参考数据库表的设计,例如：
+
 https://chihuobao.com/v1/users
+
 https://chihuobao.com/v1/members
 
 ### 4、http请求方式
@@ -32,7 +34,7 @@ https://chihuobao.com/v1/members
 
 5. DELETE（DELETE）：从服务器删除资源。
 
-使用例子：
+**使用例子：**
 
 GET /users：列出所有用户
 
@@ -77,4 +79,6 @@ https://chihuobao.com/v1/users?name=abc *返回名字为abc的用户*
 
 500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
 
-参考资料： [Rest API规范](https://blog.csdn.net/pkueecser/article/details/50193881)
+### 参考资料
+
+[Rest API规范](https://blog.csdn.net/pkueecser/article/details/50193881)
