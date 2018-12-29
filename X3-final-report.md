@@ -14,7 +14,7 @@ title: X3 final report
 
 | PSP阶段                    | 耗时(h) |
 | -------------------------- | ------- |
-| **计划**                       | **50 **      |
+| **计划**                       | **50**      |
 | 估计任务时间            | 50       |
 | **开发**                       | **114**     |
 | 分析需求                | 10      |
@@ -29,9 +29,11 @@ title: X3 final report
 
 ## Git报告
 **由于在后期为了代码更方便管理，将前端部分的内容迁移到了一个新的仓库，这里展示的后端仓库的提交记录**
+
 ![后端提交记录](assets/github-commits.png)
 
 ## 看板管理
+
 **[Github看板内容](https://github.com/sa-2018-fall/sa-docs/projects)**
 
 ![Github看板内容](assets/github-projects.png)

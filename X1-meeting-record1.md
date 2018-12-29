@@ -20,4 +20,5 @@ title: 第一次迭代会议
   - api设计
 
 **会议记录思维导图**
-![meeting1](/assets/meeting2.png)
+
+![meeting1](assets/metting2.png)
