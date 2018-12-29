@@ -19,9 +19,9 @@ layout: default
     - 6.5 [System Sequence Diagrams](06-requirement-5)（功能模型）
     - 6.6 [Supplementary Requirements](06-requirement-6)（补充需求）
 * 7、Design（设计）
-    - 7.1 [UI design](07-design-1)
+    - 7.1 UI design
         - [ChiHuoBao 用例 UI设计](07-design-1#7.1.2 除登录注册部分)
-    - 7.2 [Database design](07-design-2)
+    - 7.2 Database design
         - 7.2.1 [用户及权限系统数据库设计](07-design-2#7.2 Database design)
         - 7.2.2 [ChiHuoBao子系统数据课设计](07-design-2#7.2 Database design)
         - 7.2.3 [第三方数据评审结果](07-design-2#7.2.1 第三方数据评审结果)
