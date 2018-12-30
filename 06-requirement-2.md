@@ -88,13 +88,16 @@ title: Use Cases
 - 系统如何处理支付
 
 #### BCE 
+
 ![bce_make_order](assets/detail/MO.png)
 
 #### 顺序图
+
 ![scan QR](assets/detail/sequence/scan.jpg)
 ![make order](assets/detail/sequence/order.jpg)
 
 #### 类图
+
 ![class_make_order](assets/detail/class/MO.png)
 
 ## 6.2.2 管理菜品信息
@@ -249,6 +252,7 @@ title: Use Cases
 餐厅收到顾客的点餐信息（桌号、餐饮类型与数量、备注），以及用户的付款，可以选择拒绝或接受，若接受则根据信息打印票据。
 
 **用例图**
+
 ![餐厅管理员用例图](assets/use_case/img_use_case/manage_orders.PNG)
 
 **用例名称：**
@@ -343,6 +347,7 @@ web应用
 
 #### 用例描述
 **用例图：**  
+
 ![下单用例图](assets/use_case/img_use_case/make_order.png)
 
 **范围：** 客户端
@@ -409,13 +414,17 @@ web应用
 - 系统如何处理支付
 
 #### BCE 
+
 ![bce_make_order](assets/detail/MO.png)
 
 #### 顺序图
+
 ![scan QR](assets/detail/sequence/scan.jpg)
+
 ![make order](assets/detail/sequence/order.jpg)
 
 #### 类图
+
 ![class_make_order](assets/detail/class/MO.png)
 
 
