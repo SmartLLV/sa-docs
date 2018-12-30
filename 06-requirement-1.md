@@ -3,6 +3,10 @@ layout: default
 title: Usecase Diagram
 ---
 # 点餐系统需求规格说明
+{:.no_toc}
+
+* 目录
+{:toc}
 
 # 6.1 用例图
 
