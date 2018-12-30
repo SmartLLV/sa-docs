@@ -3,6 +3,10 @@ layout: default
 title: 物理架构云上部署 .travis.yml 文件编写与使用
 ---
 # Travis-CI
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 前提条件
 - Github 账户
