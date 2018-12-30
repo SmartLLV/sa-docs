@@ -3,6 +3,10 @@ layout: default
 title: Supplementary Requirements
 ---
 # 点餐系统需求规格说明
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 6.6 Supplementary Requirements
 
