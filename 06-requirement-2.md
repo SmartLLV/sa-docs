@@ -3,6 +3,10 @@ layout: default
 title: Use Cases
 ---
 # 点餐系统需求规格说明
+{:.no_toc}
+
+* 目录
+{:toc}
 
 | 版本 | 日期 | 描述 | 作者|
 | -- | -- | -- | -- |
