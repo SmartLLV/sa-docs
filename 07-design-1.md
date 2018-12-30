@@ -4,6 +4,10 @@ title: UI Design
 ---
 
 # 点餐系统 Design
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 7.1 UI Design
 

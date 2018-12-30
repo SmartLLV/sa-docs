@@ -4,6 +4,10 @@ title: Software Architecture Document
 ---
 
 # 点餐系统 Design
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 7.4 Software Architecture Document
 

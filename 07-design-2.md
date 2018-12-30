@@ -4,6 +4,10 @@ title: Database Design
 ---
 
 # 点餐系统 Design
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 7.2 Database design
 

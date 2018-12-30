@@ -4,6 +4,10 @@ title: API Design
 ---
 
 # 点餐系统 Design
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 7.3 API design
 [API在线文档](https://sa-2018-fall.github.io/sa-api/)

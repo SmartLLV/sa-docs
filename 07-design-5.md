@@ -3,6 +3,10 @@ layout: default
 title: Usecase design
 ---
 # 点餐系统 Design
+{:.no_toc}
+
+* 目录
+{:toc}
 
 ## 7.5 Usecase design
 
