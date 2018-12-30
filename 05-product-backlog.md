@@ -4,7 +4,12 @@ title: 产品特性
 ---
 
 # Product Backlog
+{:.no_toc}
 
+* 目录
+{:toc}
+
+### 主要内容
 编写产品Backlog需要关注的几个点：
 
 - ID：统一标识符，只是用来区分故事的递增数字。
