@@ -34,9 +34,9 @@ layout: default
     - 8.3 [逻辑架构到应用程序映射指南](08-code-rules-and-guide-3)
     - 8.4 [物理架构云上部署 .travis.yml 文件编写与使用](08-code-rules-and-guide-4)
 * 9、成品展示
-    - 9.1 [用户短视频]()
-    - 9.2 [商家短视频]()
-    - 9.3 [管理员短视频]()
+    - 9.1 [用户短视频](https://sa-2018-fall.herokuapp.com) （用户名：12345678910；密码：123456）
+    - 9.2 [商家短视频](https://sa-2018-fall.herokuapp.com) （用户名：11112222333；密码：123456）
+    - 9.3 [管理员短视频](https://sa-2018-fall.herokuapp.com/admin/home) （用户名：admin；密码：123456）
 * X1 meet_recording
     - [Inception meeting](X1-meeting-record) (2018/10/04)
     - [Iteration 1 meeting](X1-meeting-record1) (2018/11/04)
