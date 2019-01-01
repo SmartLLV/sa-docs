@@ -3,7 +3,7 @@ layout: default
 title: 项目愿景
 ---
 
-# Vision
+# 项目愿景
 {:.no_toc}
 
 * 目录
