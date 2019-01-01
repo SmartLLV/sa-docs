@@ -1,6 +1,6 @@
 ---
 layout: default
-title: API设计规范
+title: REST API设计规范
 ---
 
 # REST API设计规范
