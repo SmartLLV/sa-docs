@@ -43,6 +43,7 @@ layout: default
     - [Iteration 2 meeting](X1-meeting-record2) (2018/12/18)
 * X2 Tech/Work Report
     - 18214692-[解决方案：git pull 出现unrelated history](https://sa-2018-fall.github.io/sa-be/01-git-pull-unrelated)
+    - 18214692-[解决方案：Mongo shell 导入导出数据](https://sa-2018-fall.github.io/sa-be/02-mongo-import-outport)
 * X3 Final Report
     - 18214692-[自我总结](X3-final-report.md#自我总结)
     - [小组分工与贡献率说明](X3-final-report.md#PSP2.1统计表)
