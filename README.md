@@ -10,6 +10,12 @@
 
 [后端部分仓库链接](https://github.com/sa-2018-fall/sa-be)：[![Build Status](https://travis-ci.org/sa-2018-fall/sa-be.svg?branch=master)](https://travis-ci.org/sa-2018-fall/sa-be)
 
+# 功能架构
+
+![](assets/reports/gongneng.png)
+
+![](assets/reports/cengsheji.png)
+
 # 参考链接
 - [course_website]( http://ss.sysu.edu.cn/~pml/se305/x_Team_ticket.html)
 - [GitHub_Tutorial](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
